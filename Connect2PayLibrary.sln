@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connect2PayLibrary", "Connect2PayLibrary\Connect2PayLibrary.csproj", "{0A1A170E-149F-454D-B238-2B643863FBF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connect2PayDemo", "Connect2PayDemo\Connect2PayDemo.csproj", "{21741C7F-DADE-4ED9-8B7C-27A601E5BE8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A1A170E-149F-454D-B238-2B643863FBF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A1A170E-149F-454D-B238-2B643863FBF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A1A170E-149F-454D-B238-2B643863FBF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A1A170E-149F-454D-B238-2B643863FBF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21741C7F-DADE-4ED9-8B7C-27A601E5BE8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21741C7F-DADE-4ED9-8B7C-27A601E5BE8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21741C7F-DADE-4ED9-8B7C-27A601E5BE8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21741C7F-DADE-4ED9-8B7C-27A601E5BE8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23BC14F9-AA7B-4617-BB4A-0E68A060DE98}
+	EndGlobalSection
+EndGlobal
