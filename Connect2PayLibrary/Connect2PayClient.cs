@@ -44,5 +44,24 @@ namespace Connect2PayLibrary
         {
             return new RequestAccountInfo(RequestType.ACCOUNT_INFO, originatorId, password, url);
         }
+
+        #region Refund, rebill, cancel
+
+        public RequestRefundRebillCancel NewRequestRefund(String TransactionID)
+        {
+            return new RequestRefundRebillCancel(RequestType.REFUND_TRANSACTION, originatorId, password, url, TransactionID);
+        }
+
+        public RequestRefundRebillCancel NewRequestRebill(String TransactionID)
+        {
+            return new RequestRefundRebillCancel(RequestType.REBILL_TRANSACTION, originatorId, password, url, TransactionID);
+        }
+
+        public RequestRefundRebillCancel NewRequestCancel(String TransactionID)
+        {
+            return new RequestRefundRebillCancel(RequestType.CANCEL_TRANSACTION, originatorId, password, url, TransactionID);
+        }
+
+        #endregion
     }
 }

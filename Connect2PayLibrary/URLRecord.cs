@@ -19,10 +19,26 @@ namespace Connect2PayLibrary
             {
                 Url = "transaction/" + objectId + "/status";
                 Method = "GET";
-            } else if (action == RequestType.GET_TRANSACTION_INFORMATION)
+            }
+            else if (action == RequestType.GET_TRANSACTION_INFORMATION)
             {
                 Url = "transaction/" + objectId + "/info";
                 Method = "GET";
+            }
+            else if (action == RequestType.REFUND_TRANSACTION)
+            {
+                Url = "transaction/" + objectId + "/refund";
+                Method = "POST";
+            }
+            else if (action == RequestType.REBILL_TRANSACTION)
+            {
+                Url = "transaction/" + objectId + "/rebill";
+                Method = "POST";
+            }
+            else if (action == RequestType.CANCEL_TRANSACTION)
+            {
+                Url = "transaction/" + objectId + "/cancel";
+                Method = "POST";
             }
             else if (action == RequestType.ACCOUNT_INFO)
             {
