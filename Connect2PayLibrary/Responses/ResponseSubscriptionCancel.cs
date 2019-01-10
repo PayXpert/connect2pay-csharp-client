@@ -11,7 +11,7 @@ namespace Connect2PayLibrary.Responses
 
         public override bool IsSuccessfull()
         {
-            return (code != null && code == "000");
+            return (code != null && code == "200");
         }
     }
 }

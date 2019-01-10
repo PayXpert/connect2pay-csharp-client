@@ -24,6 +24,7 @@ namespace Connect2PayDemo
                 Console.WriteLine("3: Request account information from API");
                 Console.WriteLine("4: Authorize + Cancel");
                 Console.WriteLine("5: Sale + rebill + refund");
+                Console.WriteLine("6: Sale with subscription + cancel subscription");
 
                 Console.WriteLine("\nType 0 to exit\n");
                 Console.WriteLine("Please type relevant number and press ENTER key\n");
@@ -49,6 +50,10 @@ namespace Connect2PayDemo
                 else if (key == "5")
                 {
                     TestSaleRebillRefund();
+                }
+                else if (key == "6")
+                {
+                    TestSaleSubscription();
                 }
                 else if (key == "0")
                 {

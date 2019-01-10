@@ -9,7 +9,7 @@ namespace Connect2PayLibrary.Requests
     public class RequestSubscriptionCancelObject : BaseRequestObject
     {
         public String apiVersion { get; set; }
-        public String cancelReason { get; set; }
+        public Int32 cancelReason { get; set; }
 
         public RequestSubscriptionCancelObject()
         {
@@ -24,7 +24,7 @@ namespace Connect2PayLibrary.Requests
 
         }
 
-        public void SetReason(String subscriptionCancelReason)
+        public void SetReason(Int32 subscriptionCancelReason)
         {
             var requestObject = new RequestSubscriptionCancelObject();
             requestObject.cancelReason = subscriptionCancelReason;
