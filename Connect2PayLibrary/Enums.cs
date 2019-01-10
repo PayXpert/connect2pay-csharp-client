@@ -49,4 +49,35 @@ namespace Connect2PayLibrary
         public static String AUTHORIZE = "Authorize";
         public static String SALE = "Sale";
     }
+
+    public static class SubscriptionCancelCodes
+    {
+        public static String BANK_DENIAL = "1000";
+        public static String REFUNDED = "1001";
+        public static String RETRIEVAL = "1002";
+        public static String BANK_LETTER = "1003";
+        public static String CHARGEBACK = "1004";
+        public static String COMPANY_ACCOUNT_CLOSED = "1005";
+        public static String WEBSITE_ACCOUNT_CLOSED = "1006";
+        public static String DID_NOT_LIKE = "1007";
+        public static String DISAGREE = "1008";
+        public static String WEBMASTER_FRAUD = "1009";
+
+        public static String COULD_NOT_GET_INTO = "1010";
+        public static String NO_PROBLEM = "1011";
+        public static String NOT_UPDATED = "1012";
+        public static String TECH_PROBLEM = "1013";
+        public static String TOO_SLOW = "1014";
+        public static String DID_NOT_WORK = "1015";
+        public static String TOO_EXPENSIVE = "1016";
+        public static String UNAUTH_FAMILY = "1017";
+        public static String UNDETERMINED = "1018";
+        public static String WEBMASTER_REQUESTED = "1019";
+        public static String NOTHING_RECEIVED = "1020";
+
+        public static String DAMAGED = "1021";
+        public static String EMPTY_BOX = "1022";
+        public static String INCOMPLETE_ORDER = "1023";
+        public static String UNKNOWN_REASON = "1099";
+    }
 }

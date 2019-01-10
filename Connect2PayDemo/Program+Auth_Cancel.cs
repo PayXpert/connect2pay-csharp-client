@@ -67,7 +67,7 @@ namespace Connect2PayDemo
 
                     Console.WriteLine("Received transaction ID: " + transactionID);
 
-                    var requestCancel = client.NewRequestCancel(transactionID);
+                    var requestCancel = client.NewRequestTransactionCancel(transactionID);
                     requestCancel.SetAmount(1500);
                     var responseCancel = requestCancel.Send().Result;
 

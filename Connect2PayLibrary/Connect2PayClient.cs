@@ -57,11 +57,16 @@ namespace Connect2PayLibrary
             return new RequestRefundRebillCancel(RequestType.REBILL_TRANSACTION, originatorId, password, url, TransactionID);
         }
 
-        public RequestRefundRebillCancel NewRequestCancel(String TransactionID)
+        public RequestRefundRebillCancel NewRequestTransactionCancel(String TransactionID)
         {
             return new RequestRefundRebillCancel(RequestType.CANCEL_TRANSACTION, originatorId, password, url, TransactionID);
         }
 
         #endregion
+
+        public RequestSubscriptionCancel NewRequestSubscriptionCancel(String SubscriptionID)
+        {
+            return new RequestSubscriptionCancel(RequestType.CANCEL_SUBSCRIPTION, originatorId, password, url, SubscriptionID);
+        }
     }
 }

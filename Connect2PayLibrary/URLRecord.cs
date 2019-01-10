@@ -40,6 +40,11 @@ namespace Connect2PayLibrary
                 Url = "transaction/" + objectId + "/cancel";
                 Method = "POST";
             }
+            else if (action == RequestType.CANCEL_SUBSCRIPTION)
+            {
+                Url = "subscription/" + objectId + "/cancel";
+                Method = "POST";
+            }
             else if (action == RequestType.ACCOUNT_INFO)
             {
                 Url = "account";
