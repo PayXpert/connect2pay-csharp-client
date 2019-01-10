@@ -15,6 +15,10 @@ namespace Connect2PayLibrary
             {
                 Url = "transaction/prepare";
                 Method = "POST";
+            } else if (action == RequestType.GET_PAYMENT_STATUS)
+            {
+                Url = "transaction/" + objectId + "/status";
+                Method = "GET";
             }
         }
 

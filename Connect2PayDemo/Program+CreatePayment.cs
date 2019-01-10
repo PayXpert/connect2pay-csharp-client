@@ -45,6 +45,15 @@ namespace Connect2PayDemo
                     Console.WriteLine("Request executed successfully");
                     Console.WriteLine("Merchant token: " + response.merchantToken);
                     Console.WriteLine("Customer redirect URL: " + request.getCustomerRedirectURL());
+
+                    Console.WriteLine("You can copy this URL to browser and make a test payment");
+                    Console.WriteLine("After you finish please press any key. Payment status will be requested");
+                    Console.ReadKey();
+
+                    var requestPaymentStatus = client.NewRequestPaymentStatus(response.merchantToken);
+                    var responsePaymentStatus = requestPaymentStatus.Send().Result;
+
+                    Console.WriteLine("Payment status response received: " + responsePaymentStatus.status);
                 }
                 else
                 {

@@ -29,5 +29,10 @@ namespace Connect2PayLibrary
         {
             return new RequestCreatePayment(RequestType.CREATE_PAYMENT, originatorId, password, url, null);
         }
+
+        public RequestPaymentStatus NewRequestPaymentStatus(String MerchantToken)
+        {
+            return new RequestPaymentStatus(RequestType.GET_PAYMENT_STATUS, originatorId, password, url, MerchantToken);
+        }
     }
 }
