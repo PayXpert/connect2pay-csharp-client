@@ -39,5 +39,10 @@ namespace Connect2PayLibrary
         {
             return new RequestTransactionInfo(RequestType.GET_TRANSACTION_INFORMATION, originatorId, password, url, TransactionID);
         }
+
+        public RequestAccountInfo NewRequestAccountInfo()
+        {
+            return new RequestAccountInfo(RequestType.ACCOUNT_INFO, originatorId, password, url);
+        }
     }
 }

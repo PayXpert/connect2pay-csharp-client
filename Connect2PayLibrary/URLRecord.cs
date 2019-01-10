@@ -24,6 +24,11 @@ namespace Connect2PayLibrary
                 Url = "transaction/" + objectId + "/info";
                 Method = "GET";
             }
+            else if (action == RequestType.ACCOUNT_INFO)
+            {
+                Url = "account";
+                Method = "GET";
+            }
         }
 
         public void SetInURL(String name, String value)

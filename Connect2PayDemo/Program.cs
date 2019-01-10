@@ -21,6 +21,7 @@ namespace Connect2PayDemo
 
                 Console.WriteLine("1: Create payment and check payment status");
                 Console.WriteLine("2: Request transaction info");
+                Console.WriteLine("3: Request account information from API");
 
                 Console.WriteLine("\nType 0 to exit\n");
                 Console.WriteLine("Please type relevant number and press ENTER key\n");
@@ -34,6 +35,10 @@ namespace Connect2PayDemo
                 else if (key == "2")
                 {
                     TestTransactionInfo();
+                }
+                else if (key == "3")
+                {
+                    TestAccountInfo();
                 }
                 else if (key == "0")
                 {
