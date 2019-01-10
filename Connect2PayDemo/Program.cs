@@ -19,7 +19,8 @@ namespace Connect2PayDemo
                 Console.WriteLine("\n");
                 Console.WriteLine("Please choose test to perform:\n");
 
-                Console.WriteLine("1: Create payment");
+                Console.WriteLine("1: Create payment and check payment status");
+                Console.WriteLine("2: Request transaction info");
 
                 Console.WriteLine("\nType 0 to exit\n");
                 Console.WriteLine("Please type relevant number and press ENTER key\n");
@@ -29,6 +30,10 @@ namespace Connect2PayDemo
                 if (key == "1")
                 {
                     TestCreatePayment();
+                }
+                else if (key == "2")
+                {
+                    TestTransactionInfo();
                 }
                 else if (key == "0")
                 {

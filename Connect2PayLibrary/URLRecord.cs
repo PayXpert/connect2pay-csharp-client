@@ -19,6 +19,10 @@ namespace Connect2PayLibrary
             {
                 Url = "transaction/" + objectId + "/status";
                 Method = "GET";
+            } else if (action == RequestType.GET_TRANSACTION_INFORMATION)
+            {
+                Url = "transaction/" + objectId + "/info";
+                Method = "GET";
             }
         }
 

@@ -34,5 +34,10 @@ namespace Connect2PayLibrary
         {
             return new RequestPaymentStatus(RequestType.GET_PAYMENT_STATUS, originatorId, password, url, MerchantToken);
         }
+
+        public RequestTransactionInfo NewRequestTransactionInfo(String TransactionID)
+        {
+            return new RequestTransactionInfo(RequestType.GET_TRANSACTION_INFORMATION, originatorId, password, url, TransactionID);
+        }
     }
 }
