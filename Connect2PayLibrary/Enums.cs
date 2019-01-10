@@ -43,4 +43,10 @@ namespace Connect2PayLibrary
         public static String VIRTUAL = "Virtual";
         public static String ACCESS = "Access";
     }
+
+    public static class Operation
+    {
+        public static String AUTHORIZE = "Authorize";
+        public static String SALE = "Sale";
+    }
 }
