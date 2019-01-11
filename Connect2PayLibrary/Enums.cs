@@ -88,4 +88,10 @@ namespace Connect2PayLibrary
         public static String ONETIME = "onetime";
         public static String LIFETIME = "lifetime";
     }
+
+    public static class WeChatDirectMode
+    {
+        public static String NATIVE = "native";
+        public static String QUICK_PAY = "quickpay";
+    }
 }

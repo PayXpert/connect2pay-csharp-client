@@ -50,6 +50,11 @@ namespace Connect2PayLibrary
                 Url = "account";
                 Method = "GET";
             }
+            else if (action == RequestType.WECHAT_DIRECT)
+            {
+                Url = "payment/" + objectId + "/process/wechat/direct";
+                Method = "POST";
+            }
         }
 
         public void SetInURL(String name, String value)

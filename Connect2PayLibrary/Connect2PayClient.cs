@@ -68,5 +68,10 @@ namespace Connect2PayLibrary
         {
             return new RequestSubscriptionCancel(RequestType.CANCEL_SUBSCRIPTION, originatorId, password, url, SubscriptionID);
         }
+
+        public RequestWeChatDirect NewRequestWeChatDirect(String CustomerToken)
+        {
+            return new RequestWeChatDirect(RequestType.WECHAT_DIRECT, originatorId, password, url, CustomerToken);
+        }
     }
 }

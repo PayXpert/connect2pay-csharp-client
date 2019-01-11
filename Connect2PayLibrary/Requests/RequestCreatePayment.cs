@@ -98,7 +98,7 @@ namespace Connect2PayLibrary.Requests
 
         public RequestCreatePaymentObject()
         {
-            this.apiVersion = "002.50";
+            this.apiVersion = "002.60";
         }
 
         public bool Validate()
