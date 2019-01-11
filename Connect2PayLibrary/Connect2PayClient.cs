@@ -73,5 +73,10 @@ namespace Connect2PayLibrary
         {
             return new RequestWeChatDirect(RequestType.WECHAT_DIRECT, originatorId, password, url, CustomerToken);
         }
+
+        public RequestAliPayDirect NewRequestAliPayDirect(String CustomerToken)
+        {
+            return new RequestAliPayDirect(RequestType.ALIPAY_DIRECT, originatorId, password, url, CustomerToken);
+        }
     }
 }

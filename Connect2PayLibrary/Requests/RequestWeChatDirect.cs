@@ -31,9 +31,9 @@ namespace Connect2PayLibrary.Requests
             this.requestObject = new RequestWeChatDirectObject();            
         }
 
-        public async Task<ResponseWeChatDirect> Send()
+        public async Task<ResponseAliPayWeChatDirect> Send()
         {
-            return await SendRequestToServer<ResponseWeChatDirect>();
+            return await SendRequestToServer<ResponseAliPayWeChatDirect>();
         }
 
     }

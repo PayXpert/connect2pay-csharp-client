@@ -94,4 +94,16 @@ namespace Connect2PayLibrary
         public static String NATIVE = "native";
         public static String QUICK_PAY = "quickpay";
     }
+
+    public static class AliPayDirectMode
+    {
+        public static String APP = "app";
+        public static String POS = "pos";
+    }
+
+    public static class AliPayIdentityCodeType
+    {
+        public static String QRCODE = "qrcode";
+        public static String BARCODE = "barcode";
+    }
 }

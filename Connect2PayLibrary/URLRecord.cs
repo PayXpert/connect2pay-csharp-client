@@ -55,6 +55,11 @@ namespace Connect2PayLibrary
                 Url = "payment/" + objectId + "/process/wechat/direct";
                 Method = "POST";
             }
+            else if (action == RequestType.ALIPAY_DIRECT)
+            {
+                Url = "payment/" + objectId + "/process/alipay/direct";
+                Method = "POST";
+            }
         }
 
         public void SetInURL(String name, String value)

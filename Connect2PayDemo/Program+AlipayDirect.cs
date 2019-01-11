@@ -7,7 +7,7 @@ namespace Connect2PayDemo
 {
     partial class Program
     {
-        private static void TestWeChatDirect()
+        private static void TestAliPayDirect()
         {
             var client = new Connect2PayClient(OriginatorConfig.ORIGINATOR_ID, OriginatorConfig.ORIGINATOR_PASSWORD);
             var request = client.NewRequestCreatePayment();
@@ -19,7 +19,7 @@ namespace Connect2PayDemo
             request.Data.shippingType = ShippingType.VIRTUAL;
             request.Data.operation = Operation.SALE;
 
-            request.Data.paymentMethod = PaymentMethod.WECHAT;
+            request.Data.paymentMethod = PaymentMethod.ALIPAY;
             request.Data.paymentMode = PaymentMode.SINGLE;
 
             request.Data.amount = 1500;  // 15 EUR
@@ -50,24 +50,24 @@ namespace Connect2PayDemo
                     Console.WriteLine("Merchant token: " + response.merchantToken);
                     Console.WriteLine("Customer redirect URL: " + request.getCustomerRedirectURL());
 
-                    Console.WriteLine("Preparing WeChat direct payment...");
+                    Console.WriteLine("Preparing AliPay direct payment...");
 
-                    var requestWeChatDirect = client.NewRequestWeChatDirect(response.customerToken);
+                    var requestAlipayDirect = client.NewRequestAliPayDirect(response.customerToken);
 
-                    requestWeChatDirect.Data.mode = WeChatDirectMode.NATIVE;
+                    requestAlipayDirect.Data.mode = AliPayDirectMode.POS;
 
-                    var responseWeChatDirect = requestWeChatDirect.Send().Result;
+                    var responseAliPayDirect = requestAlipayDirect.Send().Result;
 
-                    if (responseWeChatDirect.IsSuccessfull())
+                    if (responseAliPayDirect.IsSuccessfull())
                     {
-                        Console.WriteLine("WeChat direct request prepared successfully");
-                        Console.WriteLine("WeChat QR code URL: " + responseWeChatDirect.qrCodeUrl);
+                        Console.WriteLine("AliPay direct request prepared successfully");
+                        Console.WriteLine("AliPay QR code URL: " + responseAliPayDirect.qrCodeUrl);
                         Console.WriteLine("Please press any key to continue");
                         Console.ReadKey();
                     }
                     else
                     {
-                        Console.WriteLine("WeChat direct request failure: " + responseWeChatDirect.code + ": " + responseWeChatDirect.message);
+                        Console.WriteLine("AliPay direct request failure: " + responseAliPayDirect.code + ": " + responseAliPayDirect.message);
                     }
                 }
                 else
