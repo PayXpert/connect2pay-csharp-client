@@ -1,5 +1,6 @@
 ﻿using System;
 using Connect2PayLibrary;
+using SDKTest;
 
 namespace Connect2PayDemo
 {

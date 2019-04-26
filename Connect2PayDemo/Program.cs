@@ -27,6 +27,7 @@ namespace Connect2PayDemo
                 Console.WriteLine("6: Sale with subscription + cancel subscription");
                 Console.WriteLine("7: WeChat direct payment");
                 Console.WriteLine("8: AliPay direct payment");
+                Console.WriteLine("9: Redirect status");
 
                 Console.WriteLine("\nType 0 to exit\n");
                 Console.WriteLine("Please type relevant number and press ENTER key\n");
@@ -64,6 +65,10 @@ namespace Connect2PayDemo
                 else if (key == "8")
                 {
                     TestAliPayDirect();
+                }
+                else if (key == "9")
+                {
+                    TestRedirectEncryption();
                 }
                 else if (key == "0")
                 {

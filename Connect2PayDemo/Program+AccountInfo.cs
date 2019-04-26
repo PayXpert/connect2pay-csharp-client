@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using SDKTest;
 
 namespace Connect2PayDemo
 {
