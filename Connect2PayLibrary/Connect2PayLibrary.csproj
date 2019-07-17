@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.1</Version>
+    <Authors>PAYXPERT LTD</Authors>
+    <Product>PayXpert Connect2Pay</Product>
+    <Description>Client SDK for accessing Connect2Pay from C# applications</Description>
+    <Copyright>PAYXPERT LTD</Copyright>
+    <PackageProjectUrl>https://github.com/PayXpert/connect2pay-csharp-client</PackageProjectUrl>
+    <PackageIconUrl>https://www.payxpert.com/wp-content/uploads/2018/01/cropped-favicom-180x180.jpg</PackageIconUrl>
+    <RepositoryUrl>https://github.com/PayXpert/connect2pay-csharp-client</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
