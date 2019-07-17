@@ -53,19 +53,19 @@ namespace Connect2PayLibrary
 
         #region Refund, rebill, cancel
 
-        public RequestRefundRebillCancel NewRequestRefund(String TransactionID)
+        public RequestRefund NewRequestRefund(String TransactionID)
         {
-            return new RequestRefundRebillCancel(RequestType.REFUND_TRANSACTION, originatorId, password, url, TransactionID);
+            return new RequestRefund(RequestType.REFUND_TRANSACTION, originatorId, password, url, TransactionID);
         }
 
-        public RequestRefundRebillCancel NewRequestRebill(String TransactionID)
+        public RequestRebill NewRequestRebill(String TransactionID)
         {
-            return new RequestRefundRebillCancel(RequestType.REBILL_TRANSACTION, originatorId, password, url, TransactionID);
+            return new RequestRebill(RequestType.REBILL_TRANSACTION, originatorId, password, url, TransactionID);
         }
 
-        public RequestRefundRebillCancel NewRequestTransactionCancel(String TransactionID)
+        public RequestCancel NewRequestTransactionCancel(String TransactionID)
         {
-            return new RequestRefundRebillCancel(RequestType.CANCEL_TRANSACTION, originatorId, password, url, TransactionID);
+            return new RequestCancel(RequestType.CANCEL_TRANSACTION, originatorId, password, url, TransactionID);
         }
 
         #endregion
