@@ -12,6 +12,7 @@ namespace Connect2PayLibrary
         CANCEL_TRANSACTION,
         REFUND_TRANSACTION,
         REBILL_TRANSACTION,
+        CAPTURE_TRANSACTION,
         CANCEL_SUBSCRIPTION,
         WECHAT_DIRECT,
         ALIPAY_DIRECT,

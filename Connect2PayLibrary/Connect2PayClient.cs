@@ -67,6 +67,11 @@ namespace Connect2PayLibrary
         {
             return new RequestCancel(RequestType.CANCEL_TRANSACTION, originatorId, password, url, TransactionID);
         }
+        
+        public RequestCapture NewRequestCapture(String TransactionID)
+        {
+            return new RequestCapture(RequestType.CAPTURE_TRANSACTION, originatorId, password, url, TransactionID);
+        }
 
         #endregion
 

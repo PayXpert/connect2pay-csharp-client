@@ -1,12 +1,12 @@
-﻿using Connect2PayLibrary;
 using System;
+using Connect2PayLibrary;
 using SDKTest;
 
 namespace Connect2PayDemo
 {
     partial class Program
     {
-        private static void TestAuthorizeCancel()
+        private static void TestAuthorizeCapture()
         {
             var client = new Connect2PayClient(OriginatorConfig.ORIGINATOR_ID, OriginatorConfig.ORIGINATOR_PASSWORD);
             var request = client.NewRequestCreatePayment();
@@ -18,10 +18,10 @@ namespace Connect2PayDemo
             request.Data.shippingType = ShippingType.VIRTUAL;
             request.Data.operation = Operation.AUTHORIZE;
 
-            request.Data.amount = 1500;  // 15 EUR
+            request.Data.amount = 2500;  // 25 EUR
             request.Data.currency = "EUR";
 
-            request.Data.orderDescription = "Payment of €15.00";
+            request.Data.orderDescription = "Payment of €25.00";
 
             request.Data.shopperFirstName = "RICH";
             request.Data.shopperLastName = "SHOPPER";
@@ -68,18 +68,18 @@ namespace Connect2PayDemo
 
                     Console.WriteLine("Received transaction ID: " + transactionID);
 
-                    var requestCancel = client.NewRequestTransactionCancel(transactionID);
-                    requestCancel.SetAmount(1500);
-                    var responseCancel = requestCancel.Send().Result;
+                    var requestCapture = client.NewRequestCapture(transactionID);
+                    requestCapture.SetAmount(1500);
+                    var responseCancel = requestCapture.Send().Result;
 
                     if (responseCancel.IsSuccessfull())
                     {
-                        Console.WriteLine("Cancellation transaction ID: " + responseCancel.transactionID);
+                        Console.WriteLine("Capture transaction ID: " + responseCancel.transactionID);
                         Console.WriteLine("Please press any key to continue");
                         Console.ReadKey();
                     } else
                     {
-                        Console.WriteLine("Cancellation request failure: " + responseCancel.code + ": " + responseCancel.message);
+                        Console.WriteLine("Capture request failure: " + responseCancel.code + ": " + responseCancel.message);
                     }
                 }
                 else
@@ -88,6 +88,5 @@ namespace Connect2PayDemo
                 }
             }
         }
-
     }
 }

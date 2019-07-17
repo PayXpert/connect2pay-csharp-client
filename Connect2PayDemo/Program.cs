@@ -23,11 +23,12 @@ namespace Connect2PayDemo
                 Console.WriteLine("2: Request transaction info");
                 Console.WriteLine("3: Request account information from API");
                 Console.WriteLine("4: Authorize + Cancel");
-                Console.WriteLine("5: Sale + rebill + refund");
-                Console.WriteLine("6: Sale with subscription + cancel subscription");
-                Console.WriteLine("7: WeChat direct payment");
-                Console.WriteLine("8: AliPay direct payment");
-                Console.WriteLine("9: Redirect status");
+                Console.WriteLine("5: Authorize + Capture");
+                Console.WriteLine("6: Sale + rebill + refund");
+                Console.WriteLine("7: Sale with subscription + cancel subscription");
+                Console.WriteLine("8: WeChat direct payment");
+                Console.WriteLine("9: AliPay direct payment");
+                Console.WriteLine("10: Redirect status");
 
                 Console.WriteLine("\nType 0 to exit\n");
                 Console.WriteLine("Please type relevant number and press ENTER key\n");
@@ -52,21 +53,25 @@ namespace Connect2PayDemo
                 }
                 else if (key == "5")
                 {
-                    TestSaleRebillRefund();
+                    TestAuthorizeCapture();
                 }
                 else if (key == "6")
                 {
-                    TestSaleSubscription();
+                    TestSaleRebillRefund();
                 }
                 else if (key == "7")
                 {
-                    TestWeChatDirect();
+                    TestSaleSubscription();
                 }
                 else if (key == "8")
                 {
-                    TestAliPayDirect();
+                    TestWeChatDirect();
                 }
                 else if (key == "9")
+                {
+                    TestAliPayDirect();
+                }
+                else if (key == "10")
                 {
                     TestRedirectEncryption();
                 }
