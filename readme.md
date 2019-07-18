@@ -8,6 +8,29 @@ This repository contains Visual Studio solutions with two projects
 
 Exploring SDKTest sources you can find suggestions about this SDK usage.
 
+## Installation
+
+Using the [.NET Core command-line interface (CLI) tools][dotnet-core-cli-tools]:
+
+```sh
+dotnet add package Connect2PayLibrary --version 1.0.1
+```
+
+Using the [NuGet Command Line Interface (CLI)][nuget-cli]:
+
+```sh
+nuget install Connect2PayLibrary
+```
+
+Using the [Package Manager Console][package-manager-console]:
+
+```powershell
+Install-Package Connect2PayLibrary
+```
+
+Or you can download code from here and include to your project PayXpertLibrary
+
+
 ## Compatibility
 
 This library was tested with
@@ -27,12 +50,4 @@ To run the demos, choose SDKTest as startup project and run it pressing F5.
 ## Documentation
 
 All the documentation related Payment Gateway commands and SDK usage could be found in our [documentation page!](https://developers.payxpert.com/gateway)
-
-## Use in your own project
-
-Please add "Connect2PayLibrary" project from cloned repository to your Visual Studio solution.
-
-
-
-
 
