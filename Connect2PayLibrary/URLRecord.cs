@@ -65,6 +65,11 @@ namespace Connect2PayLibrary
                 Url = "payment/" + objectId + "/process/alipay/direct";
                 Method = "POST";
             }
+            else if (action == RequestType.EXPORT_TRANSACTIONS)
+            {
+                Url = "transactions/export";
+                Method = "GET";
+            }
         }
 
         public void SetInURL(String name, String value)

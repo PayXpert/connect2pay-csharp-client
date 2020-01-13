@@ -17,6 +17,8 @@ namespace Connect2PayLibrary
         private String originatorId;
         private String password;
 
+        #region Constructors
+
         public Connect2PayClient(String Url, String OriginatorId, String Password)
         {
             this.url = Url;
@@ -30,6 +32,10 @@ namespace Connect2PayLibrary
             this.originatorId = OriginatorId;
             this.password = Password;
         }
+
+        #endregion
+
+        #region Transactions
 
         public RequestCreatePayment NewRequestCreatePayment()
         {
@@ -50,6 +56,21 @@ namespace Connect2PayLibrary
         {
             return new RequestAccountInfo(RequestType.ACCOUNT_INFO, originatorId, password, url);
         }
+
+        public RequestExportTransactions NewExportTransactionsRequest(String StartDate, String EndDate)
+        {
+            return new RequestExportTransactions(RequestType.EXPORT_TRANSACTIONS, originatorId, password, url, StartDate, EndDate);
+        }
+
+        public RequestExportTransactions NewExportTransactionsRequest(DateTime StartDate, DateTime EndDate)
+        {
+            var timestampStart = (Int32)(StartDate.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+            var timestampEnd = (Int32)(EndDate.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
+
+            return NewExportTransactionsRequest(timestampStart.ToString(), timestampEnd.ToString());
+        }
+
+        #endregion
 
         #region Refund, rebill, cancel
 

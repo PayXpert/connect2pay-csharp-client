@@ -16,7 +16,8 @@ namespace Connect2PayLibrary
         CANCEL_SUBSCRIPTION,
         WECHAT_DIRECT,
         ALIPAY_DIRECT,
-        ACCOUNT_INFO
+        ACCOUNT_INFO,
+        EXPORT_TRANSACTIONS
     }
 
     public static class PaymentMethod

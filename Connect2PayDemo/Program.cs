@@ -13,7 +13,7 @@ namespace Connect2PayDemo
                 Console.WriteLine("\n");
                 Console.WriteLine("=============================================================");
                 Console.WriteLine("|           PayXpert Connect2Pay C# SDK demo                |");
-                Console.WriteLine("|                (c) 2019, PayXpert Ltd                     |");
+                Console.WriteLine("|                (c) 2020, PayXpert Ltd                     |");
                 Console.WriteLine("|               https://www.payxpert.com                    |");
                 Console.WriteLine("=============================================================");
                 Console.WriteLine("\n");
@@ -29,6 +29,7 @@ namespace Connect2PayDemo
                 Console.WriteLine("8: WeChat direct payment");
                 Console.WriteLine("9: AliPay direct payment");
                 Console.WriteLine("10: Redirect status");
+                Console.WriteLine("11: Export transactions");
 
                 Console.WriteLine("\nType 0 to exit\n");
                 Console.WriteLine("Please type relevant number and press ENTER key\n");
@@ -74,6 +75,10 @@ namespace Connect2PayDemo
                 else if (key == "10")
                 {
                     TestRedirectEncryption();
+                }
+                else if (key == "11")
+                {
+                    TestTransactionsExport();
                 }
                 else if (key == "0")
                 {

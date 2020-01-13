@@ -6,7 +6,7 @@ namespace Connect2PayLibrary
 {
     class Utils
     {
-        public static bool DEBUG = true;
+        public static bool DEBUG = false;
 
         public static string Combine(string uri1, string uri2)
         {
