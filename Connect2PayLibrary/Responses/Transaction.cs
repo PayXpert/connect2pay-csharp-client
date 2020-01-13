@@ -28,5 +28,8 @@ namespace Connect2PayLibrary.Responses
         public String refTransactionID { get; set; }
         public String providerTransactionID { get; set; }
         public String subscriptionID { get; set; }
+
+        public String orderID { get; set; }
+        public String orderDescription { get; set; }
     }
 }

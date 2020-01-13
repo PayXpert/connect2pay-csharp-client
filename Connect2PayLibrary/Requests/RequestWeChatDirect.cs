@@ -12,9 +12,11 @@ namespace Connect2PayLibrary.Requests
         public String notificationLang { get; set; }
         public String notificationTimeZone { get; set; }
 
+        public String openID { get; set; }
+
         public RequestWeChatDirectObject()
         {
-            this.apiVersion = "002.60";
+            this.apiVersion = "002.61";
             this.mode = WeChatDirectMode.NATIVE;
         }
     }
