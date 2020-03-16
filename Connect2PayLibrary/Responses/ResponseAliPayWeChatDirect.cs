@@ -17,6 +17,20 @@ namespace Connect2PayLibrary.Responses
 
         public Transaction transaction { get; set; }
 
+        // region For SDK and  Mini Program payments
+
+        public String appId { get; set; }
+        public String partnerId { get; set; }
+        public String prepayId { get; set; }
+        public String packageStr { get; set; }
+        public String nonceStr { get; set; }
+        public String timestamp { get; set; }
+        public String sign { get; set; }
+        public String paySign { get; set; }
+        public String signType { get; set; }
+
+        // endregion
+
         public override bool IsSuccessfull()
         {
             return (code != null && code == "200");

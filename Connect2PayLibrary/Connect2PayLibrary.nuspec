@@ -11,6 +11,6 @@
     <iconUrl>https://www.payxpert.com/wp-content/uploads/2018/01/cropped-favicom-180x180.jpg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>SDK library for accessing PayXpert Connect2Pay features from C# applications</description>
-    <copyright>Copyright 2019 (c) PayXpert LTD</copyright>
+    <copyright>Copyright 2020 (c) PayXpert LTD</copyright>
   </metadata>
 </package>

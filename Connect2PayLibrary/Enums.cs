@@ -95,6 +95,16 @@ namespace Connect2PayLibrary
     {
         public static String NATIVE = "native";
         public static String QUICK_PAY = "quickpay";
+
+        /// <summary>
+        /// Used for processing payments from native iOS and Android applications
+        /// </summary>
+        public static String SDK = "sdk";
+
+        /// <summary>
+        /// Used for processing Mini Program payments
+        /// </summary>
+        public static String MINI_PROGRAM = "miniprogram";
     }
 
     public static class AliPayDirectMode
