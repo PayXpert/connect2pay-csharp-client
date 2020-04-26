@@ -13,7 +13,7 @@ Exploring SDKTest sources you can find suggestions about this SDK usage.
 Using the [.NET Core command-line interface (CLI) tools][dotnet-core-cli-tools]:
 
 ```sh
-dotnet add package Connect2PayLibrary --version 1.0.1
+dotnet add package Connect2PayLibrary --version 1.0.3
 ```
 
 Using the [NuGet Command Line Interface (CLI)][nuget-cli]:
